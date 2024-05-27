@@ -16,7 +16,13 @@ The general objectives of this course to provide a broad orientation of the fiel
 
 ### Unit 1: Introduction to Operations Research 5 Hrs
 
-Introduction, History of Operations Research, Stages of Development of Operations Research, Relationship between Manager and OR Specialist, OR Tools and Techniques, Applications of Operations Research, Limitations of Operations Research
+- Introduction 
+- History of Operations Research
+- [Stages of Development of Operations Research](./history.md#stages-of-development-of-operations-research)
+- Relationship between Manager and OR Specialist
+- OR Tools and Techniques
+- [Applications of Operations Research](./history.md#application-of-operations-research)
+- [Limitations of Operations Research](./history.md#limitations-of-operations-research)
 
 ### Unit 2: Linear Programming Problem 10 Hrs
 
