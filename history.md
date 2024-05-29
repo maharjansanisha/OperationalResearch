@@ -1,4 +1,4 @@
-## Stages of development of OR
+## Stages of development of Operations Research
 - Observe the problem equipment 
 - Analyse and define the problem
 - Develop a model 
@@ -6,7 +6,7 @@
 - Provide a solution and test 
 - Implement the solution 
 
-## Application of OR
+## Application of Operations Research
 - Accounting 
 - Construction 
 - Facilities planning 
@@ -16,7 +16,7 @@
 - Human Resource 
 - Purchasing 
 
-## Limitations of OR
+## Limitations of Operations Research
 - Distance between OR specialist and manager 
 - Magnitude of calculations 
 - Money and time costs 
