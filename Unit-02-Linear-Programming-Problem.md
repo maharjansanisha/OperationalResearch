@@ -1,3 +1,5 @@
+# Unit 02: Linear Programming Problem
+
 ## Linear Programming Problem Model
 
 1. Decision Variables 
