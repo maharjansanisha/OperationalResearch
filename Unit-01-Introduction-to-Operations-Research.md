@@ -1,3 +1,5 @@
+# Unit 01: Introduction to Operations Research
+
 ## Stages of development of Operations Research
 - Observe the problem equipment 
 - Analyse and define the problem
@@ -21,4 +23,4 @@
 - Magnitude of calculations 
 - Money and time costs 
 - Non qutifers factors 
-- Implementation 
+- Implementation
