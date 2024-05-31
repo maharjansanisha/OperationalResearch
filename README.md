@@ -26,7 +26,9 @@ The general objectives of this course to provide a broad orientation of the fiel
 
 ### Unit 2: Linear Programming Problem 10 Hrs
 
-[Introduction to Linear Programming](Unit-02-Linear-Programming-Problem.md#linear-programming-problem-model), [Linear Programming Problem Formulation](Unit-02-Linear-Programming-Problem.md#formulation-of-lpp), Formulation with Different Types of Constraints, Graphical Analysis of Linear Programming, Graphical Linear Programming Solution, Multiple Optimal Solutions, Unbounded Solution, Infeasible Solution, Basics of Simplex Method, Simplex Method Computation, Simplex Method with More Than Two Variables, Primal and Dual Problems, Economic Interpretation
+- [Introduction to Linear Programming](Unit-02-Linear-Programming-Problem.md#linear-programming-problem-model)
+- [Linear Programming Problem Formulation](Unit-02-Linear-Programming-Problem.md#formulation-of-lpp)
+- Formulation with Different Types of Constraints, Graphical Analysis of Linear Programming, Graphical Linear Programming Solution, Multiple Optimal Solutions, Unbounded Solution, Infeasible Solution, Basics of Simplex Method, Simplex Method Computation, Simplex Method with More Than Two Variables, Primal and Dual Problems, Economic Interpretation
 
 ### Unit 3: Transportation and Assignment Problem 8 Hrs
 
