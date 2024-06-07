@@ -16,11 +16,11 @@ The general objectives of this course to provide a broad orientation of the fiel
 
 ### Unit 1: Introduction to Operations Research 5 Hrs
 
-- Introduction 
-- History of Operations Research
+- [Introduction](./Unit-01-Introduction-to-Operations-Research.md#introduction) 
+- [History of Operations Research](./Unit-01-Introduction-to-Operations-Research.md#history-of-operations-research)
 - [Stages of Development of Operations Research](./Unit-01-Introduction-to-Operations-Research.md#stages-of-development-of-operations-research)
-- Relationship between Manager and OR Specialist
-- OR Tools and Techniques
+- [Relationship between Manager and OR Specialist](./Unit-01-Introduction-to-Operations-Research.md#relationship-between-manager-and-or-specialist)
+- [OR Tools and Techniques](./Unit-01-Introduction-to-Operations-Research.md#or-tools-and-techniques)
 - [Applications of Operations Research](./Unit-01-Introduction-to-Operations-Research.md#application-of-operations-research)
 - [Limitations of Operations Research](./Unit-01-Introduction-to-Operations-Research.md#limitations-of-operations-research)
 
