@@ -17,6 +17,8 @@
 
 ### Formulation of LPP
 
+- [Numerical Problems](./Unit-02-Numericals.md)
+
 #### Question 1
 
 A factory produces two products P1 and P2. Each product requires time on two machines M1 and M2. The factory wants to determine how many units of each product to maximise its profilt.
