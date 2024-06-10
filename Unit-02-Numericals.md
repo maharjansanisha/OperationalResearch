@@ -41,48 +41,13 @@ Let y be the no. of package of yummies.
 | Blending           |         0.25         |         0.20         |
 | Profit per package |        $0.65         |        $0.45         |
 
-**Profit of each package of Meaties**
-
-```
-Selling Price of Meaties = $2.8 per package,
-Packaging Price of Meaties = $0.25 per package,
-
-Cost of Cereal = $0.2 per pound,
-Quantity of Cereal in Meaties = 2 lb per package,
-
-Cost of Meat = $0.5 per pound,
-Quantity of Meat in Meaties = 3 lb per package,
-
-Profit of each package of Meaties = Selling Price of Meaties - Packaging Price of Meaties - (Cost of Cereal x Quantity of Cereal in Meaties) - (Cost of Meat x Quantity of Meat in Meaties)
-= 2.8 - 0.25 - (0.2 * 2) - (0.5 * 3)
-= 2.8 - 0.25 - 0.4 - 1.5
-= 2.55 - 1.9
-= 0.65
-```
-
-**Profit of each package of Yummies**
-
-```
-Selling Price of Yummies = $2 per package,
-Packaging Price of Yummies = $0.2 per package,
-
-Cost of Cereal = $0.2 per pound,
-Quantity of Cereal in Yummies = 3 lb per package,
-
-Cost of Meat = $0.5 per pound,
-Quantity of Meat in Yummies = 1.5 lb per package,
-
-Profit of each package of Yummies = Selling Price of Yummies - Packaging Price of Yummies - (Cost of Cereal x Quantity of Cereal in Yummies) - (Cost of Meat x Quantity of Meat in Yummies)
-= 2 - 0.2 - (0.2 * 3) - (0.5 * 1.5)
-= 2 - 0.2 - 0.6 - 0.75
-= 1.8 - 1.35
-= 0.45
-```
-
 **Objective Function**
 
 ```
 Max z ≥ 0.65x + 0.45y
+Here,
+0.65 represents the profit of Meaties
+0.45 represents the profit of Yummies
 ```
 
 **Constraints**
@@ -93,3 +58,32 @@ Max z ≥ 0.65x + 0.45y
 x ≤ 90,000
 x, y ≥ 0
 ```
+
+Solving using simplex method,
+
+```
+Z = 0.65x + 0.45y
+Z - 0.65x - 0.45y + 0 * s1 + 0 * s2 + 0 * s3 = 0
+```
+
+```
+2x + 3.0y + 1 * s1 + 0 * s2 + 0 * s3 = 400,000
+3x + 1.5y + 0 * s1 + 1 * s2 + 0 * s3 = 300,000
+1x + 0.0y + 0 * s1 + 1 * s2 + 1 * s3 = 90,000
+x, y, s1, s2 ≥ 0
+```
+
+| Basic Variable |   x   |   y   | s1  | s2  | s3  |   RHS   |  Ratio  |
+| :------------- | :---: | :---: | :-: | :-: | :-: | :-----: | :-----: |
+| z              | -0.65 | -0.45 |  0  |  0  |  0  |    0    |    0    |
+| s1             |   2   |  3.0  |  1  |  0  |  0  | 400,000 | 200,000 |
+| s2             |   3   |  1.5  |  0  |  1  |  0  | 300,000 | 100,000 |
+| s3             |   1   |  0.0  |  0  |  0  |  1  | 90,000  | 90,000  |
+
+```
+Here, the pivot column is x.
+the pivot row is s3
+
+Performing s3 -= 1
+```
+
