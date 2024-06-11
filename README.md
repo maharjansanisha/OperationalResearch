@@ -49,3 +49,39 @@ hrs. Introduction, Replacement of capital equipment which depreciated with time,
 ### Unit 7: Game Theory 7 Hrs
 
 Introduction, Characteristics of Game Theory, Two Person, Zero sum games, pure strategy. Dominance theory, Mixed strategies (2×2, mx2), Algebraic and graphical methods
+
+## Teaching Methods
+The general teaching pedagogy includes class lectures, presentations, group works, case studies, guest lecturers research works, project works, assignments (Theoretical and Practical). The teaching faculty will determine the choice of teaching pedagogy and encouraged to select software tools as per the requirements of topics for practical activities.
+
+## References / Suggested Readings:
+1. Hillier, F.S. & Lieberman, G.J. (1995). Introduction to Operations Research, 7<sup>th</sup> edition. The McGraw-Hill Companies, Inc. [View/Download](https://mega.nz/file/Qb1inD4A#f5I9_iaa6NqlB3S-oWPsbTeCjFnOafXybOIy_unFios)
+2. Natarajan, A. M.; Balasubramani, P. & Tamilarasi, A. (2007). Operations Research. Pearson Education Inc. [View/Download](https://mega.nz/file/9OlgTYbK#bE9mbAtmkMA1KP8UWeI0evSpmwKLo1ukTbWUA_4Xa1w)
+3. Sharma, J.K. (2009). Operational Research: Theory and Application. Macmillan Publishers India Ltd. [View/Download](https://mega.nz/file/MCVDzAqI#xpfvLHrU50banvoQsy-qYn3NIUVu_F86Ypn0gAqIETE)
+4. Taha, H.A. (2017). Operations Research: A Introduction, l0<sup>th</sup> edition, Global edition, Pearson Education, Inc. Pearson Prentice Hall. [View/Download](https://mega.nz/file/RP0CnbxI#BjCavLl-6bOwNwSLkHWg7zMip8NrqbjibmwAzCYtr1o)
+5. Wagner, H.N. (2003). Operations Research by, Prentice hall. N D Vohra,Tata McGraw-Hill. [View/Download](https://mega.nz/file/JGlnUJZK#ThIWIaeOfgcmiO5zaX9y5hasDRCruQhtr2MS4aPVIF0)
+6. Winston, L.W. (2004). Operations Research: Applications and Algorithms, Indian University, 4<sup>th</sup> edition. [View/Download](https://mega.nz/file/satx0K4I#BLR6L1OaJjkgxJ5YpBZVuLt7cCYZP_3U55EmZ9BDzSg) [Solutions](https://www.chegg.com/homework-help/student-solutions-manual-for-winston-s-operations-research-applications-and-algorithms-4th-edition-solutions-9780534423605)
+
+## Evaluation
+<table>
+<tr>
+    <th colspan="5" style="text-align: center;">Examination Scheme</th>
+</tr>
+  <tr>
+    <th colspan="2">Internal Assessment</th>
+    <th colspan="2">External Assessment</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <td>Theory</td>
+    <td>Practical</td>
+    <td>Theory</td>
+    <td>Practical</td>
+    <td rowspan="2">100</td>
+  </tr>
+  <tr>
+    <td>40</td>
+    <td style="text-align: center;">-</td>
+    <td>60</td>
+    <td style="text-align: center;">-</td>
+  </tr>
+</table>
