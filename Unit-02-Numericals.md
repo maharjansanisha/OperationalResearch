@@ -148,3 +148,115 @@ R4 = R4 + 0.45R2
 Max Z = 6.75
 6.75 at (9, 2)
 ```
+
+## Question 2
+
+```
+Max Z = 3x1 + 2x2 + 5x3
+
+subject to: x1 + 2x2 + x3 &le; 430
+            3x1 + 2x3 &le; 460
+            x1 + 4x2 &le; 420
+            x1, x2, x3 &ge; 0
+```
+
+**Introduce slack variable**
+
+```
+x1 + 2x2 + x3 = 430
+3x1 + 2x3 = 460
+x1 + 4x2 = 420
+-3x1 - 2x2 - x3 = 0
+```
+
+**Canonical form**
+
+```
+1x1 + 2x2 + 1x3 + 1 * s1 + 0 * s2 + 0 * s3 = 430
+3x1 + 0x2 + 2x3 + 0 * s1 + 1 * s2 + 0 * s3 = 460
+1x1 + 4x2 + 0x3 + 0 * s1 + 0 * s2 + 1 * s3 = 420
+- 3x1 - 2x2 - 5x3 + 0 * s1 + 0 * s2 + 0 * s3 + z = 0
+```
+
+**First Tableau**
+
+| Basic Variable | x1  | x2  | x3  | s1  | s2  | s3  |  z  | RHS | Ratio |
+| :------------- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :---: |
+| s1             |  1  |  2  |  1  |  1  |  0  |  0  |  0  | 430 |  430  |
+| s2             |  3  |  0  |  2  |  0  |  1  |  0  |  0  | 460 |  230  |
+| s3             |  1  |  4  |  0  |  0  |  0  |  1  |  0  | 420 |       |
+| z              | -3  | -2  | -5  |  0  |  0  |  0  |  1  |  0  |   0   |
+
+```
+The last row has three -ve and hence doesn't give optimal solution.
+Since -5 < -3 < -2, x3 is pivot column.
+
+Since 230 < 430, s2 row is pivot row.
+s2 is departing element and 2 is pivot element.
+```
+
+**Second Tableau**
+
+```
+Divide s2 / 2
+```
+
+| Basic Variable | x1  | x2  | x3  | s1  | s2  | s3  |  z  | RHS |
+| :------------- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| s1             |  1  |  2  |  1  |  1  |  0  |  0  |  0  | 430 |
+| x3             | 1.5 |  0  |  1  |  0  | 0.5 |  0  |  0  | 230 |
+| s3             |  1  |  4  |  0  |  0  |  0  |  1  |  0  | 420 |
+| z              | -3  | -2  | -5  |  0  |  0  |  0  |  1  |  0  |
+
+**Third Tableau**
+
+```
+R1 = R1 - R2
+R4 = R4 + 5R2
+```
+
+| Basic Variable |  x1  | x2  | x3  | s1  |  s2  | s3  |  z  | RHS  | Ratio |
+| :------------- | :--: | :-: | :-: | :-: | :--: | :-: | :-: | :--: | :---: |
+| s1             | -0.5 |  2  |  0  |  1  | -0.5 |  0  |  0  | 200  |  100  |
+| x3             | 1.5  |  0  |  1  |  0  | 0.5  |  0  |  0  | 230  |       |
+| s3             |  1   |  4  |  0  |  0  |  0   |  1  |  0  | 420  |  105  |
+| z              | 4.5  | -2  |  0  |  0  |  0   |  0  |  1  | 1150 |   0   |
+
+```
+The last row still consists of -ve.
+So the pivot column is x2.
+
+Since 100 < 105, s1 row is pivot row.
+s1 is departing element and 2 is pivot element.
+```
+
+**Forth Tableau**
+
+```
+Divide R1 / 2
+```
+
+| Basic Variable |  x1   | x2  | x3  | s1  |  s2   | s3  |  z  | RHS  |
+| :------------- | :---: | :-: | :-: | :-: | :---: | :-: | :-: | :--: |
+| x2             | -0.25 |  1  |  0  | 0.5 | -0.25 |  0  |  0  | 100  |
+| x3             |  1.5  |  0  |  1  |  0  |  0.5  |  0  |  0  | 230  |
+| s3             |   1   |  4  |  0  |  0  |   0   |  1  |  0  | 420  |
+| z              |  4.5  | -2  |  0  |  0  |   0   |  0  |  1  | 1150 |
+
+**Fifth Tableau**
+
+```
+R3 = R3 - 4R1
+R4 = R4 + 2R1
+```
+
+| Basic Variable |  x1   | x2  | x3  | s1  |  s2   | s3  |  z  |  RHS |
+| :------------- | :---: | :-: | :-: | :-: | :---: | :-: | :-: | ---: |
+| x2             | -0.25 |  1  |  0  | 0.5 | -0.25 |  0  |  0  |  100 |
+| x3             |  1.5  |  0  |  1  |  0  |  0.5  |  0  |  0  |  230 |
+| s3             |   2   |  0  |  0  | -2  |   1   |  1  |  0  |   20 |
+| z              |   4   |  0  |  0  |  1  | -0.5  |  0  |  1  | 1350 |
+
+```
+This function maximizes to the value 1350 at the points (x1,x2,x3) = (0, 100, 230)
+```
