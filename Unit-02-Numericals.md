@@ -260,3 +260,133 @@ R4 = R4 + 2R1
 ```
 This function maximizes to the value 1350 at the points (x1,x2,x3) = (0, 100, 230)
 ```
+
+## Question 3
+
+```
+Min Z = - 4x1 - x2 - 3x3 - 5x4
+
+subject to: 4x1 - 6x2 - 5x3 - 4x4 ≥ -20
+            -3x1 - 2x2 + 4x3 + x4 ≤ 10
+            -8x1 - 3x2 + 3x3 + 2x4 ≤ 20
+            x1, x2, x3, x4 ≥ 0
+```
+
+```
+The first condition to solve simplex method should be of maximize and
+The constaints must be ≤.
+
+Since there exist minimize in objective function and ≥ in constraints
+we now multiply it with -ve to satisfy the condition.
+```
+
+```
+Max Z* = -Z = 4x1 + x2 + 3x3 + 5x4
+Subject to: -4x1 + 6x2 + 5x3 + 4x4 ≤ 20
+            -3x1 - 2x2 + 4x3 + x4 ≤ 10
+            -8x1 - 3x2 + 3x3 + 2x4 ≤ 20
+            x1, x2, x3, x4 ≥ 0
+```
+
+**Introduce slack variable**
+
+```
+-4x1 + 6x2 + 5x3 + 4x4 = 20
+-3x1 - 2x2 + 4x3 + 1x4 = 10
+-8x1 - 3x2 + 3x3 + 2x4 = 20
+4x1 + 1x2 + 3x3 + 5x4 = 0
+```
+
+**Canonical form**
+
+```
+-4x1 + 6x2 + 5x3 + 4x4 + 1 * s1 + 0 * s2 + 0 * s3 = 20
+-3x1 - 2x2 + 4x3 + 1x4 + 0 * s1 + 1 * s2 + 0 * s3 = 10
+-8x1 - 3x2 + 3x3 + 2x4 + 0 * s1 + 0 * s2 + 1 * s3 = 20
+-4x1 - 1x2 - 3x3 - 5x4 + 0 * s1 + 0 * s2 + 0 * s3 + z* = 0
+```
+
+**First Tableau**
+
+| Basic Variable | x1  | x2  | x3  | x4  | s1  | s2  | s3  | z\* | RHS | Ratio |
+| :------------- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :---: |
+| s1             | -4  |  6  |  5  |  4  |  1  |  0  |  0  |  0  | 20  |   5   |
+| s2             | -3  | -2  |  4  |  1  |  0  |  1  |  0  |  0  | 10  |  10   |
+| s3             | -8  | -3  |  3  |  2  |  0  |  0  |  1  |  0  | 20  |  10   |
+| z\*            | -4  | -1  | -3  | -5  |  0  |  0  |  0  |  1  |  0  |   0   |
+
+```
+The last row has four -ve and hence doesn't give optimal solution.
+Since -5 < -4 < -3 < -1, x4 is pivot column.
+
+Since 5 < 10, s1 row is pivot row.
+s1 is departing element and 4 is pivot element.
+```
+
+**Second Tableau**
+
+```
+Divide s1 / 4
+```
+
+| Basic Variable | x1  | x2  |  x3  | x4  |  s1  | s2  | s3  | z\* | RHS |
+| :------------- | :-: | :-: | :--: | :-: | :--: | :-: | :-: | :-: | :-: |
+| x4             | -1  | 1.5 | 1.25 |  1  | 0.25 |  0  |  0  |  0  |  5  |
+| s2             | -3  | -2  |  4   |  1  |  0   |  1  |  0  |  0  | 10  |
+| s3             | -8  | -3  |  3   |  2  |  0   |  0  |  1  |  0  | 20  |
+| z\*            | -4  | -1  |  -3  | -5  |  0   |  0  |  0  |  1  |  0  |
+
+**Third Tableau**
+
+```
+R2 = R2 - R1
+R3 = R3 - 2R1
+R4 = R4 + 5R1
+```
+
+| Basic Variable | x1  |  x2  |  x3  | x4  |  s1  | s2  | s3  | z\* | RHS | Ratio |
+| :------------- | :-: | :--: | :--: | :-: | :--: | :-: | :-: | :-: | :-: | :---: |
+| x4             | -1  | 1.5  | 1.25 |  1  | 0.25 |  0  |  0  |  0  |  5  |  -5   |
+| s2             | -2  | -3.5 | 2.75 |  0  |  0   |  1  |  0  |  0  |  5  | -2.5  |
+| s3             | -6  |  -6  | 0.5  |  0  |  0   |  0  |  1  |  0  | 10  | -1.66 |
+| z\*            | -9  | 6.5  | 3.25 |  0  | 1.25 |  0  |  0  |  1  | 25  | -2.77 |
+
+```
+The last row still consists of -ve.
+So the pivot column is x1.
+
+Since -1.66 < -2.5 < -2.77 < -5, s3 row is pivot row.
+s3 is departing element and -6 is pivot element.
+```
+
+**Forth Tableau**
+
+```
+R3 / -6
+```
+
+| Basic Variable | x1  |  x2  |  x3   | x4  |  s1  | s2  |  s3  | z\* | RHS  |
+| :------------- | :-: | :--: | :---: | :-: | :--: | :-: | :--: | :-: | :--: |
+| x4             | -1  | 1.5  | 1.25  |  1  | 0.25 |  0  |  0   |  0  |  5   |
+| s2             | -2  | -3.5 | 2.75  |  0  |  0   |  1  |  0   |  0  |  5   |
+| x1             |  1  |  1   | 0.083 |  0  |  0   |  0  | 0.16 |  0  | 1.66 |
+| z\*            | -9  | 6.5  | 3.25  |  0  | 1.25 |  0  |  0   |  1  |  25  |
+
+**Third Tableau**
+
+```
+R1 = R1 + R3
+R2 = R2 + 2R3
+R4 = R4 + 9R3
+```
+
+| Basic Variable | x1  |  x2  |  x3   | x4  |  s1  | s2  |  s3  | z\* | RHS  |
+| :------------- | :-: | :--: | :---: | :-: | :--: | :-: | :--: | :-: | :--: |
+| x4             |  0  | 2.5  | 2.25  |  2  | 1.25 |  1  | 0.16 |  0  | 6.66 |
+| s2             |  0  | -1.5 | 2.916 |  0  |  0   |  1  | 0.32 |  0  |  15  |
+| x1             |  1  |  1   | 0.083 |  0  |  0   |  0  | 0.16 |  0  | 1.66 |
+| z\*            |  0  | 15.5 | 3.997 |  0  | 1.25 |  0  | 1.44 |  1  | 39.4 |
+
+```
+No Solution
+```
