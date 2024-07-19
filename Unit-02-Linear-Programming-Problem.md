@@ -4,7 +4,7 @@
 
 1. Decision Variables
 
-    - Identify what variables affect the outcome of the objective function. These are the variables you will solve for.
+   - Identify what variables affect the outcome of the objective function. These are the variables you will solve for.
 
 2. Objective Function
 
@@ -26,7 +26,7 @@ A factory produces two products P1 and P2. Each product requires time on two mac
 - Each unit of P1 requires 2 hours on M1 and 1 hr on M2.
 - Each unit of P2 requires 1 hour on M1 and 3 hr on M2.
 - Machine M1 is available for 100 hours.
-- Machine M2 is available for 90 hours. 
+- Machine M2 is available for 90 hours.
 - The profit per unit of P1 is $40.
 - The profit per unit of P2 is $40.
 
@@ -57,9 +57,9 @@ Max ≥ 40x+40y
 
 The Healthy Pet Food Company manufactures two types of dog food: `Meaties` and `Yummies`. Each package of Meaties contains `2 pounds of cereal` and `3 pounds of meat`; each package of Yummies contains `3 pounds of cereal` and `1.5 pounds of meat`. Healthy believes it can sell as much of each dog food as it can make. Meaties sell for `$2.80 per package` and Yummies sell for `$2.00 per package`. Healthy's production is limited in several ways.
 
-- Healthy can buy only up to `400,000 pounds of cereal` each month at `$0.20 per pound`. 
-- It can buy only up to `300,000 pounds of meat` per month at `$0.50 per pound`. 
-- A special piece of machinery is required to make Meaties, and this machine has a capacity of `90,000 packages per month`. 
+- Healthy can buy only up to `400,000 pounds of cereal` each month at `$0.20 per pound`.
+- It can buy only up to `300,000 pounds of meat` per month at `$0.50 per pound`.
+- A special piece of machinery is required to make Meaties, and this machine has a capacity of `90,000 packages per month`.
 - The variable cost of blending and packing the dog food is `$0.25 per package` for Meaties and `$0.20 per package` for Yummies.
 
 <u>Given</u>
@@ -148,4 +148,18 @@ x ≤ 90,000
 x, y ≥ 0
 ```
 
-Test
+## Unboundedness:
+
+- A LLP is unbounded if the solution can be made infinitely large without violating any of the constraints in the problem
+- will not be finite solution.
+- unbounded solution condition exists at that condition when each elements of key column in either negative or zero.
+
+## Infeasible solution
+
+- Infeasibility means there is no solution which satisfies all the constraints.
+
+## Degeneracy
+
+- The phenomenon where we end up doing more iterations that we actually have to without improving this objective function value is called degeneracy.
+
+- The tiew in minimum ratio ensures that on basisi variable takes value zero in next interation.
